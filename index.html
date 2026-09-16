@@ -1,0 +1,77 @@
+<title>Shorts Publisher Policies</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#F1F2EE; --bg-raised:#E6E9E1; --text:#1C211E; --text-dim:#57615B;
+    --border:#CBD2C4; --accent:#2C7A92; --accent-tint:#D7E9EC; --code-bg:#E1E5DA; --code-text:#2A362F;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#141917; --bg-raised:#1C2320; --text:#E7ECE6; --text-dim:#9AA69E;
+      --border:#333D37; --accent:#6FC2D8; --accent-tint:#1E3339; --code-bg:#1E2521; --code-text:#C9E0D0;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#141917; --bg-raised:#1C2320; --text:#E7ECE6; --text-dim:#9AA69E;
+    --border:#333D37; --accent:#6FC2D8; --accent-tint:#1E3339; --code-bg:#1E2521; --code-text:#C9E0D0;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--text); font-family:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif; line-height:1.6; font-size:16.5px;}
+  .page{max-width:700px; margin:0 auto; padding:56px 24px 90px;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin:0 0 14px;}
+  h1{font-family:"IBM Plex Serif",Georgia,serif; font-weight:600; font-size:clamp(26px,4vw,36px); line-height:1.15; margin:0 0 14px; text-wrap:balance;}
+  .meta{display:flex; gap:10px; flex-wrap:wrap; margin:0 0 36px;}
+  .meta span{font-family:"IBM Plex Mono",monospace; font-size:12px; background:var(--accent-tint); color:var(--accent); padding:4px 10px; border-radius:20px;}
+  .intro{color:var(--text-dim); font-size:16.5px; max-width:62ch; margin:0 0 44px; text-wrap:pretty;}
+  h2{font-family:"IBM Plex Serif",Georgia,serif; font-weight:600; font-size:21px; margin:44px 0 14px; display:flex; align-items:baseline; gap:10px;}
+  h2 .num{font-family:"IBM Plex Mono",monospace; font-size:15px; color:var(--accent); font-weight:500;}
+  h3{font-size:15.5px; font-weight:600; margin:22px 0 6px; display:flex; gap:8px;}
+  h3 .num{font-family:"IBM Plex Mono",monospace; color:var(--text-dim); font-weight:500;}
+  p{max-width:66ch; margin:0 0 14px;}
+  ul{padding-left:1.3em; margin:0 0 14px; max-width:62ch;}
+  li{margin:4px 0;}
+  code{font-family:"IBM Plex Mono",monospace; font-size:.9em; background:var(--code-bg); color:var(--code-text); padding:.1em .38em; border-radius:3px;}
+  .divider{border:none; border-top:1px solid var(--border); margin:48px 0;}
+  .callout{background:var(--bg-raised); border-left:3px solid var(--accent); border-radius:0 8px 8px 0; padding:16px 20px; margin:20px 0;}
+  .callout p{margin:0; max-width:none;}
+  footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--border); font-size:13px; color:var(--text-dim);}
+  a{color:var(--accent);}
+  @media (max-width:480px){ h2{flex-wrap:wrap;} }
+</style>
+
+<div class="page">
+  <p class="eyebrow">Shorts Publisher &middot; Hartklop Horizon</p>
+  <h1>Privacy Policy &amp; Terms of Use</h1>
+  <div class="meta"><span>Effective 2026-09-14</span><span>Single-user personal tool</span></div>
+
+  <p class="intro">Shorts Publisher is a personal, single-user application built for one person — Lourens Taylor — to schedule his own video uploads to his own YouTube, TikTok, Instagram, and Facebook accounts for the Hartklop Horizon channel. It is not distributed, not multi-tenant, and not offered as a service to anyone else. This page exists to satisfy the platforms' own requirement that a connected app link to a privacy policy.</p>
+
+  <h2><span class="num">1</span> What the app touches</h2>
+  <p>To do its job, the app handles:</p>
+  <ul>
+    <li>Video files and thumbnail images you select from your own computer</li>
+    <li>Text you enter: titles, descriptions, tags, and playlist selections</li>
+    <li>OAuth access and refresh tokens for the YouTube, TikTok, Instagram, and Facebook accounts you connect</li>
+  </ul>
+
+  <h3><span class="num">1.1</span> Where it's stored</h3>
+  <p>Everything above is stored locally, in a SQLite database on the same laptop the app runs on. Nothing is uploaded to any server operated by the app's developer, because none exists — there is no backend, no hosting, no analytics collection. Uninstalling the app or deleting its local data folder removes it entirely.</p>
+
+  <h3><span class="num">1.2</span> Who it's shared with</h3>
+  <p>At the scheduled time, the video, thumbnail, title, description, tags, and playlist for a post are sent directly from your laptop to the one platform that post targets — YouTube's, TikTok's, or Meta's own servers — using each platform's official API. That is the only sharing this app performs. Once a platform receives that content, its handling is governed by that platform's own privacy policy, not this one.</p>
+
+  <div class="callout"><p><strong>No third parties, no ad networks, no analytics SDKs.</strong> The only network calls this app makes are: (a) to the platform you're publishing to, and (b) briefly, a Cloudflare tunnel used only to let Instagram's servers fetch a video or thumbnail file that Instagram's API requires a URL for — the tunnel exists only for the seconds a publish takes, then closes.</p></div>
+
+  <h2><span class="num">2</span> Your control over connected accounts</h2>
+  <p>Each platform account is connected via that platform's own OAuth consent screen — you can revoke access at any time from that platform's own account settings (e.g. Google Account → Security → Third-party access), independent of this app.</p>
+
+  <h2><span class="num">3</span> Terms of use</h2>
+  <p>This tool is provided as-is, for its owner's personal use, with no warranty of any kind. Responsibility for the content it publishes, and for complying with each destination platform's content and community guidelines, rests with the person operating it — not with the software itself.</p>
+
+  <h2><span class="num">4</span> Changes</h2>
+  <p>Since this is a personal tool rather than a public product, this page is updated only when what the app actually does changes. The effective date above reflects the last such change.</p>
+
+  <hr class="divider">
+  <footer>Contact: <a href="mailto:lourens.taylor@gmail.com">lourens.taylor@gmail.com</a></footer>
+</div>
