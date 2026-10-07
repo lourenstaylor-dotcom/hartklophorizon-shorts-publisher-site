@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Returning to Shorts Publisher</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 4rem auto; padding: 0 1rem; color: #1b1f1d; }
+  @media (prefers-color-scheme: dark) { body { background: #141917; color: #e6ebe8; } }
+</style>
+</head>
+<body>
+<h1>Returning to Shorts Publisher</h1>
+<p id="msg">Passing your sign-in back to the app on this computer&hellip;</p>
+<script>
+  // Meta only accepts https redirect URIs. This page hands the result straight
+  // to the app's loopback listener on the same computer; nothing is stored or sent elsewhere.
+  var q = window.location.search;
+  if (q.indexOf('code=') !== -1 || q.indexOf('error=') !== -1) {
+    window.location.replace('http://127.0.0.1:51789/oauth/callback' + q);
+  } else {
+    document.getElementById('msg').textContent = 'Nothing to pass back. You can close this tab.';
+  }
+</script>
+</body>
+</html>
