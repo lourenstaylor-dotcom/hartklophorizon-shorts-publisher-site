@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video Publisher</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#F1F2EE; --bg-raised:#E6E9E1; --text:#1C211E; --text-dim:#57615B;
+    --border:#CBD2C4; --accent:#2C7A92; --accent-tint:#D7E9EC;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#141917; --bg-raised:#1C2320; --text:#E7ECE6; --text-dim:#9AA69E;
+      --border:#333D37; --accent:#6FC2D8; --accent-tint:#1E3339;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--text); font-family:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif; line-height:1.6; font-size:16.5px; margin:0;}
+  .page{max-width:700px; margin:0 auto; padding:56px 24px 90px;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin:0 0 14px;}
+  h1{font-family:"IBM Plex Serif",Georgia,serif; font-weight:600; font-size:clamp(26px,4vw,36px); line-height:1.15; margin:0 0 14px;}
+  .meta{display:flex; gap:10px; flex-wrap:wrap; margin:0 0 36px;}
+  .meta span{font-family:"IBM Plex Mono",monospace; font-size:12px; background:var(--accent-tint); color:var(--accent); padding:4px 10px; border-radius:20px;}
+  h2{font-family:"IBM Plex Serif",Georgia,serif; font-weight:600; font-size:21px; margin:40px 0 14px;}
+  p{max-width:66ch; margin:0 0 14px;}
+  ul{padding-left:1.3em; margin:0 0 14px; max-width:62ch;}
+  li{margin:4px 0;}
+  footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--border); font-size:13px; color:var(--text-dim);}
+  a{color:var(--accent);}
+</style>
+</head>
+<body>
+<div class="page">
+  <p class="eyebrow">Hartklop Horizon</p>
+  <h1>Video Publisher</h1>
+  <div class="meta"><span>Personal tool</span><span>Windows</span></div>
+
+  <p>Video Publisher is a personal Windows application used by Lourens Taylor to upload full-length videos to his own YouTube channels and to schedule them to be published one per day. It is built for one person and is not offered to the public.</p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Reads a folder of finished videos with their thumbnails and text files for titles, descriptions and tags</li>
+    <li>Uploads each video to the chosen YouTube channel as a private video that YouTube publishes on its scheduled day</li>
+    <li>Adds the video to the chosen playlist and sets its language and category</li>
+    <li>Keeps track of what has been scheduled, so a later batch continues where the last one stopped</li>
+  </ul>
+
+  <h2>Policies</h2>
+  <ul>
+    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms of Use</a></li>
+  </ul>
+
+  <footer>Contact: <a href="mailto:lourens.taylor@gmail.com">lourens.taylor@gmail.com</a></footer>
+</div>
+</body>
+</html>
